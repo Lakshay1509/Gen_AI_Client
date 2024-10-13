@@ -39,7 +39,7 @@ const Dashboard = () => {
     const fetchMood = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/v1/users/getMood`,
+          `https://gen-ai-server-gwml.onrender.com/api/v1/users/getMood`,
           {
             params: {
               id: contextId,
@@ -49,7 +49,7 @@ const Dashboard = () => {
         setMoods(Array.from(response.data.message));
 
         const response2 = await axios.get(
-          `http://localhost:8000/api/v1/users/getWeekly`,
+          `https://gen-ai-server-gwml.onrender.com/api/v1/users/getWeekly`,
           {
             params: {
               id: contextId,

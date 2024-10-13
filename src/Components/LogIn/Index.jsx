@@ -24,7 +24,7 @@ const FormLogin = () => {
         }
 
         try{
-            const response = await axios.post("http://localhost:8000/api/v1/users/login",user);
+            const response = await axios.post("https://gen-ai-server-gwml.onrender.com/api/v1/users/login",user);
             console.log(response);
             if(response.data.message._id !== ""){
                 setid(response.data.message.user._id)

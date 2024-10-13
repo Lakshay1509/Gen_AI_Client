@@ -22,7 +22,7 @@ const Button = ({ newMoods }) => {
   const handleSubmit = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/v1/users/updateMood`,
+        `https://gen-ai-server-gwml.onrender.com/api/v1/users/updateMood`,
         moodJson,
         {
           params: {
@@ -33,7 +33,7 @@ const Button = ({ newMoods }) => {
 
       setMoods(Array.from(response.data.message));
       const response2 =await axios.put(
-        `http://localhost:8000/api/v1/users/updateMoodWeek`,
+        `https://gen-ai-server-gwml.onrender.com/api/v1/users/updateMoodWeek`,
         weeklyJson,
         {
           params: {

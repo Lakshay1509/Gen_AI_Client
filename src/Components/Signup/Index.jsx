@@ -31,7 +31,7 @@ const Form = () => {
         }
 
         try{
-            const response = await axios.post("http://localhost:8000/api/v1/users/register",user);
+            const response = await axios.post("https://gen-ai-server-gwml.onrender.com/api/v1/users/register",user);
             console.log(response);
             if(response.data.data._id !== ""){
                 setid(response.data.data._id)
