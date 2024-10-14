@@ -95,35 +95,35 @@ const StyledWrapper = styled.div`
     #fff calc(var(--spacing) * -2) 0;
 }
 
-.btn-23:hover .marquee {
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-  opacity: 1;
-}
+// .btn-23:hover .marquee {
+//   -webkit-animation-play-state: running;
+//   animation-play-state: running;
+//   opacity: 1;
+// }
 
-.btn-23:hover .text {
-  opacity: 0;
-}
+// .btn-23:hover .text {
+//   opacity: 0;
+// }
 
-@-webkit-keyframes marquee {
-  0% {
-    transform: translateX(var(--start));
-  }
+// @-webkit-keyframes marquee {
+//   0% {
+//     transform: translateX(var(--start));
+//   }
 
-  to {
-    transform: translateX(var(--end));
-  }
-}
+//   to {
+//     transform: translateX(var(--end));
+//   }
+// }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(var(--start));
-  }
+// @keyframes marquee {
+//   0% {
+//     transform: translateX(var(--start));
+//   }
 
-  to {
-    transform: translateX(var(--end));
-  }
-}
+//   to {
+//     transform: translateX(var(--end));
+//   }
+// }
 
 `;
 

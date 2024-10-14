@@ -1,17 +1,19 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import React , {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+
 
 const CheckUserContext = () => {
-    const storedUsername = useSelector((state) => state.user.fullname);
+    
+    const dispatch = useDispatch();
 
-    console.log(storedUsername);
+    useEffect(() => {
+        
+    }, []);
+
+    
     
     return (
-        <div>
-            
-            Hello
-        </div>
+        <></>
     );
     
 };

@@ -25,6 +25,7 @@ const ChartData = ({ moods }) => {
     <div className="bg-white p-4 dark:bg-gray-800 rounded-lg shadow-md">
       <h3 className="text-lg font-semibold mb-4">Emotional Analysis</h3>
       <Bar data={dataBar(moods)} />
+      
     </div>
   );
 };

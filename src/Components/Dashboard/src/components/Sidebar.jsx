@@ -14,11 +14,6 @@ const Sidebar = () => {
 					<FaTachometerAlt />
 					<span className='hidden md:inline'>Dashboard</span>
 				</li>
-				<li className="flex items-center py-3 px-2 space-x-4 hover:rounded hover:cursor-pointer 
-        hover:text-white hover:bg-blue-600">
-					<FaCog />
-					<span className="hidden md:inline ">Settings</span>
-				</li>
 			</ul>
 		</div>
 	)

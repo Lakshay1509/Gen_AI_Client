@@ -28,7 +28,7 @@ const Books = () => {
 
   return (
     <>
-      <div className="w-full md:flex ">
+      <div className="w-full md:flex ml-[50px] ">
         <div className=" gap-4 mt-[20px] md:w-1/2 ">
           <h1 className="text-start text-2xl mb-[10px] font-bold  ">
             {" "}
@@ -56,7 +56,7 @@ const Books = () => {
         </div>
 
         <div className="gap-4 mt-[20px] md:w-1/2">
-          <h1 className="text-start text-2xl mb-[10px] font-bold  ">
+          <h1 className="text-start text-2xl mb-[10px] font-bold   ">
             {" "}
             Suggested podcasts for you :{" "}
           </h1>
@@ -84,14 +84,14 @@ const Books = () => {
         <Loader display={!success} />
       </div>
       <div className="w-full  flex flex-col justify-center items-center mt-[20px]">
-        <div className="w-3/4 flex justify-center p-4 bg-white rounded-xl mb-[10px]">
+        {/* <div className="w-3/4 flex justify-center p-4 bg-white rounded-xl mb-[10px]">
           <p className="font">{quote}</p>
-        </div>
-        <div className="w-3/4 flex justify-center p-4 bg-white rounded-xl">
+        </div> */}
+        {/* <div className="w-3/4 flex justify-center p-4 bg-white rounded-xl">
           <p className="font">
             National Helpline Number : 011-22592818 , 1800-599-0019
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );

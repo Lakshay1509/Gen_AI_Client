@@ -11,6 +11,8 @@ import MyComponent from "../../../Bento/Bento.jsx";
 import Books from "./Books/Books.jsx";
 import { Link } from "react-router-dom";
 import Pie from "../assets/PieChart.jsx"
+import Input  from "./Diagnosis/Diagnosis.jsx";
+import Footer from "./Footer.jsx";
 import {
   Chart as ChartJS,
   LineElement,
@@ -98,11 +100,14 @@ const Dashboard = () => {
   }
 
   return (
+    <>
     <div className="grow p-8 font-body bg-[#bde0fe]">
       <h2 className="text-2xl mb-4">Dashboard</h2>
       <Stats />
 
       <Select />
+
+      <Input />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="bg-white p-4 dark:bg-gray-800 rounded-lg shadow-md">
@@ -116,19 +121,19 @@ const Dashboard = () => {
       <MyComponent />
 
       <Books />
-      <div className="text-center mt-[30px] text-lg mb-[20px] ">
+      {/* <div className="text-center mt-[30px] text-lg mb-[20px] ">
       <span className="bg-[#fefae0] p-4 rounded-xl text-sm">Need Assistance ? Feel Free to ask anything</span>
-      </div>
-      <div className="w-full flex justify-center items-center">
+      </div> */}
+      {/* <div className="w-full flex justify-center items-center">
 
       <Link to="/chatbot">
         <button className="primary-btn">Chat with S.A.M</button>
       </Link>
-      </div>
-
+      </div> */}
       
-
     </div>
+    <Footer />
+    </>
   );
 };
 
