@@ -5,6 +5,8 @@ import { Navigate } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { setFullnameContext, setUsernameContext, setEmailContext, setIdContext } from "../../User/user.js"
 
+import Loader from "../Dashboard/src/components/Diagnosis/Loader.jsx";
+
 const Form = () => {
   
 
@@ -14,6 +16,7 @@ const Form = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [fullname, setFullname] = useState("");
     const [success, setSuccess] = useState(false);
+    const [loaderStatus, setLoaderStatus] = useState(false);
     const [id, setid] = useState("");
     const dispatch = useDispatch();
     const handleSubmit = async (e) =>{
@@ -31,11 +34,13 @@ const Form = () => {
         }
 
         try{
+            setLoaderStatus(true);
             const response = await axios.post("https://gen-ai-server-gwml.onrender.com/api/v1/users/register",user);
             console.log(response);
             if(response.data.data._id !== ""){
                 setid(response.data.data._id)
                 setSuccess(true);
+                setLoaderStatus(false);
             }
 
 
@@ -132,6 +137,9 @@ const Form = () => {
         <div className="flex justify-center mt-[10px]">
             Already a Member ?{" "}
              <a href="#">Sign Up</a>
+        </div>
+        <div className="flex justify-center items-center">
+        <Loader display={loaderStatus} />
         </div>
       </div>
     </StyledWrapper>

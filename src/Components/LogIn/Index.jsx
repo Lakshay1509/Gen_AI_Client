@@ -4,6 +4,7 @@ import axios from "axios";
 import { Navigate ,useNavigate} from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { setFullnameContext, setUsernameContext, setEmailContext, setIdContext } from '../../User/user.js'
+import Loader from '../Dashboard/src/components/Diagnosis/Loader.jsx'
 
 const FormLogin = () => {
 
@@ -11,6 +12,7 @@ const FormLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
+    const [loaderStatus, setLoaderStatus] = useState(false);
     const [id, setid] = useState("");
     const dispatch = useDispatch();
 
@@ -24,11 +26,13 @@ const FormLogin = () => {
         }
 
         try{
+           setLoaderStatus(true);
             const response = await axios.post("https://gen-ai-server-gwml.onrender.com/api/v1/users/login",user);
             console.log(response);
             if(response.data.message._id !== ""){
                 setid(response.data.message.user._id)
                 setSuccess(true);
+                setLoaderStatus(false);
             }
 
 
@@ -89,6 +93,9 @@ const FormLogin = () => {
           </span>
           <button className="login-button" onClick={handleSubmit}>Log In</button>
         </form>
+        <div className="flex justify-center items-center">
+        <Loader display={loaderStatus} />
+        </div>
       </div>
     </StyledWrapper>
   );
