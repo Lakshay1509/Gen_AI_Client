@@ -38,7 +38,8 @@ const FormLogin = () => {
 
         }
         catch(err){
-            console.log(err);
+            alert("Incorrect mail or password")
+            setLoaderStatus(false);
         }
       
     }

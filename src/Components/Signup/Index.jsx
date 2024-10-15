@@ -46,7 +46,8 @@ const Form = () => {
 
         }
         catch(err){
-            console.log(err);
+            alert("Username or Email already exists")
+            setLoaderStatus(false);
         }
         
     }
