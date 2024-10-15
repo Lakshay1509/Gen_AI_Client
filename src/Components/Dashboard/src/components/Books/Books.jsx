@@ -43,7 +43,7 @@ const Books = () => {
               className="bg-white p-4 rounded-xl my-[10px] w-4/5 h-[205px] overflow-scroll"
               key={index}
             >
-              <h1 className="text-2xl font-semibold">{book.name}</h1>
+              <p className="text-xl font-semibold">{book.name}</p>
               <p className="text-sm">{book.description}</p>
 
               <a
@@ -68,7 +68,7 @@ const Books = () => {
               className="bg-white p-4 rounded-xl my-[10px] w-4/5 h-[205px] overflow-scroll"
               key={index}
             >
-              <h1 className="text-2xl font-semibold">{podcast.name}</h1>
+              <p className="text-xl font-semibold">{podcast.name}</p>
               <p className="text-sm">{podcast.description}</p>
 
               <a
