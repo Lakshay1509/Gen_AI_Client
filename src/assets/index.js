@@ -8,6 +8,8 @@ import gemini from './gemini.svg'
 import first from './bento/first.webp'
 import second from './bento/second.webp'
 import logo2 from './logo2.png'
+import meditationImage from './meditation.svg'
+import breathingImage from './breathing.svg'
 
 export{
     developer,
@@ -19,5 +21,7 @@ export{
     gemini,
     first,
     second,
-    logo2
+    logo2,
+    meditationImage,
+    breathingImage
 }
