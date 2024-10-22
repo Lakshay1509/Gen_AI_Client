@@ -14,6 +14,7 @@ const LogIn = () => {
         </span>
       </button>
         </Link>
+       
     </StyledWrapper>
   );
 };

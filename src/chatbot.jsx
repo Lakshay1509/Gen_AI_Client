@@ -134,9 +134,7 @@ const Chatbot = () => {
             <img src={delete1} className="size-6"/>
           </button>
           
-        </div>
-        <div className="text-white w-full flex justify-center font-body">Powered By Gemini<span><img src={gemini} className="size-5 ml-[5px] mt-[1px]"/></span></div>
-        
+        </div>  
       </footer>
     </div>
   );

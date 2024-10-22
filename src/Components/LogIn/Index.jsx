@@ -95,9 +95,12 @@ const FormLogin = () => {
           <button className="login-button" onClick={handleSubmit}>Log In</button>
         </form>
         <div className="flex justify-center items-center">
+        <div className="text-center">Log In can take up to 1 minute.</div>
         <Loader display={loaderStatus} />
         </div>
+        
       </div>
+      
     </StyledWrapper>
   );
 };

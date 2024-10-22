@@ -135,14 +135,12 @@ const Form = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-center mt-[10px]">
-            Already a Member ?{" "}
-             <a href="#">Sign Up</a>
-        </div>
         <div className="flex justify-center items-center">
+        <div className="text-center">Sign Up can take up to 1 minute.</div>
         <Loader display={loaderStatus} />
         </div>
       </div>
+      
     </StyledWrapper>
   );
 };

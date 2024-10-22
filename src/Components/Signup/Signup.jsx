@@ -14,6 +14,7 @@ const SignUp = () => {
         </span>
       </button>
         </Link>
+        
     </StyledWrapper>
   );
 };
